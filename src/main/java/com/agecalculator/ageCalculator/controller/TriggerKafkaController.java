@@ -39,7 +39,7 @@ public class TriggerKafkaController {
         return new ResponseEntity<>(payload, HttpStatus.OK);
     }
 
-    @GetMapping("/api")
+    @GetMapping("/consume")
     public Map<String, String> getLatestMessage() {
         Map<String, String> message = tc.getMessage();
         return message;
